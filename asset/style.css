@@ -1,0 +1,351 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary--: #B2925F;
+    --secondary--: #030026;
+    --background-light--: #fafbff;
+}
+
+body {
+    background-color: var(--background-light--);
+    font-family: "Kanit", sans-serif;
+    overflow-x: hidden;
+}
+
+/* Navbar */
+
+nav {
+    background-color: rgba(3, 0, 38 , 0.3);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    
+}
+
+.logo-web {
+    margin-left: 5%;
+}
+
+.logo-web img {
+    width: 200px;
+
+}
+
+.menu {
+    margin-right: 5%;
+}
+
+.menu li {
+    display: inline-block;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: var(--background-light--);
+    margin-left: 40px;
+    font-size: 18px;
+}
+
+/* Section welcome */
+
+.welcome {
+    height: 100vh;
+    background-color: var(--secondary--);
+    border-radius: 0 0 100% 0;
+    display: flex;
+    align-items: center;
+    border-bottom: 60px solid var(--primary--);
+}
+
+.slider {
+    width: 100%;
+}
+
+.slider img {
+    width: 100%;
+    height: 600px;
+}
+
+.welcome h1 {
+    font-size: 3rem;
+    width: 50vw;
+    margin-left: 5%;
+    line-height: 50px;
+    color: var(--background-light--);
+}
+
+/* INFO */
+
+.info {
+    width: 100%;
+    text-align: center;
+}
+
+.info h1 {
+    font-size: 2rem;
+}
+
+.card {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.menu-card {
+    cursor: pointer;
+    margin: 40px;
+    padding: 60px 30px;
+    border-radius: 10px;
+    width: max-content;
+    border: 1px solid rgba(159, 159, 159, 0.5);
+    transition: 0.3s;
+}
+
+.menu-card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2)
+}  
+
+
+.menu-card img {
+    width: 80px;
+}
+
+
+/* Main */
+
+/* main {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;    
+}
+
+.hero img {
+    width: 400px;
+} */
+
+
+/* ================CHAT================ */
+
+.chat-container {
+    width: 500px;
+    display: none;
+    position: fixed;
+    bottom: 4%;
+    right: 4%;
+    height: max-content;
+    background-color: aliceblue;
+    border-radius: 15px;
+    box-sizing: border-box;
+    z-index: 100;
+    box-shadow: 0 0 128px rgba(203, 203, 203, 0.1), 0 32px 64px rgba(159, 159, 159, 0.5);
+}
+
+.logo-chatbot {
+    padding: 16px;
+    text-align: center;
+    background-color: #030026;
+    color: aliceblue;
+    font-size: 20px;
+    border-radius: 15px 15px 0 0;
+}
+
+.chat-box {
+    height: 500px;
+    overflow-y: auto;
+    background-color: var(--primary--);
+    padding-top: 10px;
+}
+
+.chat-box .chat {
+    display: flex;
+}
+
+.chat-box .bot-respond {
+    justify-content: flex-start;
+}
+
+.chat-box .user-chat {
+    justify-content: flex-end;
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+
+}
+
+/* BOT RESPOND */
+
+.chat-box .bot-respond img {
+    width: 40px;
+    margin-left: 10px;
+    height: 40px;
+    padding: 4px;
+    background-color: var(--secondary--);
+    border-radius: 50%;
+}
+
+.chat-box .user-chat img {
+    width: 40px;
+    height: 40px;
+    padding: 4px;
+    border-radius: 50%;
+    margin-left: 10px;
+    order: 2;
+    background-color: var(--background-light--);
+
+}
+
+.chat-box .bot-respond p {
+    padding: 10px;
+    margin-left: 3%;
+    background-color: #e3e3e3;
+    color: black;
+    border-radius: 10px 10px 10px 0;
+    max-width: 250px;
+}
+
+.chat-box .user-chat p {
+    padding: 10px;
+    border-radius: 10px 10px 0 10px;
+    background-color: var(--secondary--);
+    color: #c9c9c9;
+    max-width: 250px;
+    order: 1;
+}
+
+.user-input {
+    border-top: 1px solid grey;
+    display: flex;
+    height: max-content;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.user-input textarea {
+    max-height: 50px;
+    margin: 10px 10px 10px 20px;
+    color: #03c9f6;
+    background-color: inherit;
+    resize: none;
+    border: none;
+    font-family: "Kanit", sans-serif;
+    font-size: 16px;
+    border-bottom: 2px solid #030026;
+}
+
+.user-input textarea:focus {
+    outline: none;
+}
+
+.user-input textarea::placeholder {
+    color: var(--secondary--)
+}
+
+.user-input ::-webkit-scrollbar,
+.chat-container ::-webkit-scrollbar {
+    width: 5px;
+    cursor: pointer;
+}
+
+.user-input ::-webkit-scrollbar-thumb,
+.chat-container ::-webkit-scrollbar-thumb {
+    background: var(--secondary--);
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+/* Chat pop up */
+
+
+.chat-pop-up img {
+    width: 80px;
+    cursor: pointer;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    transition: transform 0.5s ease;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.chat-pop-up img:hover {
+    transform: rotate(20deg) scale(1.1);
+}
+
+
+/* Button */
+
+#kirim {
+    border: none;
+    margin-left: 20px;
+    background-color: inherit;
+}
+
+#kirim img {
+    width: 30px;
+    cursor: pointer;
+
+}
+
+/* CSS untuk mengubah warna SVG saat dihover */
+#kirim img:hover {
+    transform: rotate(-10deg)
+}
+
+
+/* close Button */
+
+.close-chat {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: max-content;
+    cursor: pointer;
+    display: flex;
+    background-color: #030026;
+    border: 2px solid white;
+    transition: 0.5s;
+    border-radius: 50%;
+    z-index: 101; /* Pastikan ini lebih tinggi dari chat-container */
+}
+
+.close-chat:hover {
+    background-color: red;
+    transform: rotate(360deg);
+}
+
+.close-chat img {
+    width: 25px;
+    padding: 10px;
+}
+
+/* Cear button */
+
+.clear-chat {
+    position: absolute;
+    background-color: #030026;
+    border-radius: 50%;
+    cursor: pointer;
+    right: -60px;
+    top: 400px;
+    display: flex;
+    transition: 0.5s;
+}
+
+.clear-chat:hover {
+    background-color: red;
+}
+
+.clear-chat img {
+    width: 30px;
+    height: 30px;
+   padding: 10px;
+}
+
