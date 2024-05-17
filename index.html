@@ -4,13 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NABot</title>
+    <title>Negeri Agung </title>
     <link rel="stylesheet" href="asset/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+    <link rel="icon" href="asset/img/Lambang_Kabupaten_Tanggamus.png" type="image/png">
 </head>
 
 <body>
@@ -25,9 +26,11 @@
             <li><a href="">Pelayanan</a></li>
             <li><a href="">Kontak</a></li>
         </div>
-        <!-- <div class="search-bar">
-            <input type="text">
-        </div> -->
+       <div class="hamburger-menu">
+            <div class="line-1"></div>
+            <div class="line-2"></div>
+            <div class="line-3"></div>
+       </div>
     </nav>
 
     <section class="welcome">
@@ -41,24 +44,89 @@
 
     <section class="info">
         <h1>Info pekon negeri agung</h1>
+        <div class="line"></div>
         <p>Manu khusus pemerintahan pekon negeri agung</p>
 
         <div class="card">
             <div class="menu-card">
-                <img src="asset/img/icon/galery-menu.svg" alt="">
+                <div class="icon-menu-wrapper">
+                    <img src="asset/img/icon/galery-menu.svg" alt="">
+                </div>
                 <h3>Galery</h3>
             </div>
             <div class="menu-card">
-                <img src="asset/img/icon/users-menu.svg" alt="">
+                <div class="icon-menu-wrapper">
+                    <img src="asset/img/icon/users-menu.svg" alt="">
+                </div>
                 <h3>Profil pejabat</h3>
             </div>
             <div class="menu-card">
-                <img src="asset/img/icon/attention-menu.svg" alt="">
+                <div class="icon-menu-wrapper">
+                    <img src="asset/img/icon/berita-menu.svg" alt="">
+                </div>
+                <h3>Berita</h3>
+            </div>
+            <div class="menu-card">
+                <div class="icon-menu-wrapper">
+                    <img src="asset/img/icon/attention-menu.svg" alt="">
+                </div>
                 <h3>Pengumuman</h3>
             </div>
             <div class="menu-card">
-                <img src="asset/img/icon/agenda-menu.svg" alt="">
+                <div class="icon-menu-wrapper">
+                    <img src="asset/img/icon/agenda-menu.svg" alt="">
+                </div>
                 <h3>Agenda</h3>
+            </div>
+        </div>
+
+        <button>Lihat Selengkapnya</button>
+
+        <div class="wrapper-sambutan">
+            <div class="sambutan">
+                <img src="asset/img/ArifGranada.jpg" alt="" srcset="">
+                <h1>ARIF GRANADA S.H</h1>
+            </div>
+            <h2>" Selamat datang di website pemerintahan pekon Negeri Agung
+                wahai wargaku " 
+            </h2>
+        </div>
+    </section>
+
+    <section class="berita">
+        <h1>Berita Terkini</h1>
+        <div class="line"></div>
+        <div class="wrapper-berita">
+            <div class="wrapper-main-berita">
+                <img src="asset/img/ArifGranada.jpg" alt="">
+                <div class="main-berita-content">
+                    <h2>Masyrakat ingin pemerintah buat banyak pembuangan sampah</h2>
+                    <p>Belakang ini sangat banyak sekali sampah yang menumpuk di desa sinar petir yang megakitbatkan banjir</p>
+                    <button>Baca selengkapnya</button>
+                </div>
+            </div>
+            <div class="beritas">
+                <div class="card-berita">
+                    <img src="asset/img/ArifGranada.jpg" alt="">
+                    <div>
+                        <h3>NASA berbohong , sebenarnya bumi itu datar </h3>
+                        <button>Baca selengkapnya</button>
+                    </div>
+                </div>
+                <div class="card-berita">
+                    <img src="asset/img/berita-1.png" alt="">
+                    <div>
+                        <h3>NASA berbohong , sebenarnya bumi itu datar </h3>
+                        <button>Baca selengkapnya</button>
+                    </div>
+                </div>
+                <div class="card-berita">
+                    <img src="asset/img/ArifGranada.jpg" alt="">
+                    <div>
+                        <h3>NASA berbohong , sebenarnya bumi itu datar </h3>
+                        <button>Baca selengkapnya</button>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -74,19 +142,22 @@
             <div class="clear-chat">
                 <img src="asset/img/clear-button.svg" alt="">
             </div>
-            <div class="logo-chatbot">PROTOTYPE</div>
-                <div class="chat-box">
-                    <li class="chat bot-respond">
-                        <img src="asset/img/herochat.svg" class="herochat" alt="" srcset="">
-                        <p>Halo ada yang bisa saya bantu?</p>
-                    </li>
-                </div>
-                <div class="user-input">
-                    <textarea name="" placeholder="Masukan teks..." id="input" cols="30" rows="1"></textarea>
-                    <button id="kirim">
-                        <img src="asset/img/send-button.svg" alt="">
-                    </button>
-                </div>
+            <div class="logo-chatbot">
+                <img src="asset/img/herochat.svg" alt="" srcset="">
+                <h4>NABOT</h4>
+            </div>
+            <div class="chat-box">
+                <li class="chat bot-respond">
+                    <img src="asset/img/herochat.svg" class="herochat" alt="" srcset="">
+                    <p>Halo ada yang bisa saya bantu?</p>
+                </li>
+            </div>
+            <div class="user-input">
+                <textarea name="" placeholder="Masukan teks..." id="input" cols="30" rows="1"></textarea>
+                <button id="kirim">
+                    <img src="asset/img/send-button.svg" alt="">
+                </button>
+            </div>
         </div>
 
         <div class="chat-pop-up">

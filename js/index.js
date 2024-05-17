@@ -35,16 +35,16 @@ sendButton.addEventListener('click', () => {
     }
 })
 
-textarea.addEventListener('input', function () {
-        this.style.height = 'auto'; // Reset tinggi untuk menghitung ulang
-        this.style.height = this.scrollHeight + 'px'; // Set tinggi berdasarkan konten
-});
-
 textarea.addEventListener('keypress', function (event) {
     if (event.key === 'Enter') {
         event.preventDefault();
         sendMessage();
     }
+});
+
+textarea.addEventListener('input', function () {
+    this.style.height = 'auto';
+    this.style.height = this.scrollHeight + 'px'; 
 });
 
 document.addEventListener('DOMContentLoaded', function() {

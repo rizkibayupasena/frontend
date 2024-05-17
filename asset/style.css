@@ -18,7 +18,8 @@ body {
 /* Navbar */
 
 nav {
-    background-color: rgba(3, 0, 38 , 0.3);
+    background-color: rgba(3, 0, 38 , 0.4);
+    backdrop-filter: blur(5px);
     width: 100%;
     display: flex;
     align-items: center;
@@ -51,6 +52,29 @@ nav {
     font-size: 18px;
 }
 
+.menu li :hover{
+    border-bottom: 2px solid var(--background-light--);
+}
+
+/* Hamburger menu */
+
+.hamburger-menu {
+    width: max-content;
+    margin-right: 5%;
+    cursor: pointer;
+    display: none;
+}
+
+.hamburger-menu div {
+    width: 32px;
+    height: 4px;
+    border-radius: 2px;
+    margin: 4px 0;
+    background-color: var(--background-light--);
+}
+
+
+
 /* Section welcome */
 
 .welcome {
@@ -60,15 +84,6 @@ nav {
     display: flex;
     align-items: center;
     border-bottom: 60px solid var(--primary--);
-}
-
-.slider {
-    width: 100%;
-}
-
-.slider img {
-    width: 100%;
-    height: 600px;
 }
 
 .welcome h1 {
@@ -88,6 +103,19 @@ nav {
 
 .info h1 {
     font-size: 2rem;
+    color: var(--secondary--);
+}
+
+.line {
+    width: 60px;
+    height: 5px;
+    border-radius: 20px;
+    background-color: var(--primary--);
+    margin: auto;
+}
+
+.info p {
+    margin-top: 20px;
 }
 
 .card {
@@ -99,36 +127,174 @@ nav {
 .menu-card {
     cursor: pointer;
     margin: 40px;
+    width: 100px;
     padding: 60px 30px;
     border-radius: 10px;
-    width: max-content;
     border: 1px solid rgba(159, 159, 159, 0.5);
     transition: 0.3s;
 }
 
 .menu-card:hover{
-    transform: translateY(-10px);
+    transform: translateY(-10px); 
+    border: 1px solid var(--secondary--);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2)
-}  
+}
 
+.icon-menu-wrapper {
+    height: max-content;
+    width: max-content;
+    margin: auto;
+}
 
-.menu-card img {
-    width: 80px;
+.icon-menu-wrapper img {
+    width: 50px;
+    height: 50px;
+}
+
+.menu-card h3 {
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.info button {
+    border: none;
+    background-color: var(--secondary--);
+    color: var(--background-light--);
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    border-radius: 16px;
+    cursor: pointer;
+    font-family: "Kanit" , "sans-serif";
+    width: 200px;
+    height: 40px;
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+
+.info button:hover {
+   background-color: var(--background-light--);
+   color: var(--secondary--);
+   border: 1px solid var(--secondary--);
+}
+
+/* ========SAMBUTAN======== */
+
+.wrapper-sambutan {
+    background-color: var(--secondary--);
+    color: var(--background-light--);
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.wrapper-sambutan h1 {
+    color: var(--background-light--);
+}
+
+.sambutan {
+    margin-bottom: 20px;
 }
 
 
-/* Main */
+/* ==========BERITA========== */
 
-/* main {
+.berita {
+    text-align: center;
+    height: 100vh;
+}
+
+.berita h1 {
+    padding-top: 20px;
+    font-size: 2rem;
+    color: var(--secondary--);
+}
+
+.wrapper-berita {
+    max-width: 60%;
+    margin: auto;
+    margin-top: 20px;
+    background-color: #ededed;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+}
+
+.wrapper-main-berita {
     display: flex;
     justify-content: center;
-    height: 100vh;
-    align-items: center;    
+    align-items: center;
+    margin-top: 40px;
 }
 
-.hero img {
+.wrapper-main-berita img {
+    width: 500px;
+    height: 300px;
+    border-radius: 10px 10px 0 0;
+}
+
+.main-berita-content {
     width: 400px;
-} */
+    text-align: left;
+    margin-left: 40px;
+}
+
+.main-berita-content h2 {
+    line-height: 24px;
+}
+
+.main-berita-content p {
+    margin-top: 20px;
+    line-height: 20px;
+}
+
+.main-berita-content button {
+    border: none;
+    font-family: "Kanit", "sans-serif";
+    background-color: inherit;
+    font-size: medium;
+    font-weight: 600;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+/* =========Beritas======== */
+
+.beritas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.card-berita img {
+    width: 300px;
+    height: 200px;
+    border-radius: 14px 14px 0 0;
+}
+
+.card-berita {
+    width: 300px;
+    text-align: left;
+   
+}
+
+.card-berita div {
+    padding: 10px;
+}
+
+.card-berita div h3 {
+    line-height: 20px;
+}
+
+.card-berita div button {
+    border: none;
+    font-family: "Kanit", "sans-serif";
+    background-color: inherit;
+    font-size: medium;
+    font-weight: 600;
+    margin-top: 20px;
+    cursor: pointer;
+}
 
 
 /* ================CHAT================ */
@@ -150,10 +316,19 @@ nav {
 .logo-chatbot {
     padding: 16px;
     text-align: center;
-    background-color: #030026;
-    color: aliceblue;
+    background-color: var(--secondary--);
+    color: var(--background-light--);
     font-size: 20px;
     border-radius: 15px 15px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-chatbot img {
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
 }
 
 .chat-box {
@@ -205,18 +380,19 @@ nav {
 .chat-box .bot-respond p {
     padding: 10px;
     margin-left: 3%;
-    background-color: #e3e3e3;
-    color: black;
-    border-radius: 10px 10px 10px 0;
+    background-color: var(--background-light--);
+    color: var(--secondary--);
+    border-radius: 0 10px 10px 10px;
     max-width: 250px;
 }
 
 .chat-box .user-chat p {
     padding: 10px;
-    border-radius: 10px 10px 0 10px;
+    border-radius: 10px 0 10px 10px ;
     background-color: var(--secondary--);
-    color: #c9c9c9;
+    color: var(--background-light--);
     max-width: 250px;
+    word-break: break-all;
     order: 1;
 }
 
@@ -231,17 +407,17 @@ nav {
 .user-input textarea {
     max-height: 50px;
     margin: 10px 10px 10px 20px;
-    color: #03c9f6;
+    color: var(--secondary--);
     background-color: inherit;
     resize: none;
     border: none;
     font-family: "Kanit", sans-serif;
     font-size: 16px;
-    border-bottom: 2px solid #030026;
 }
 
 .user-input textarea:focus {
     outline: none;
+    border-bottom: 1px solid var(--secondary--);
 }
 
 .user-input textarea::placeholder {
@@ -313,7 +489,7 @@ nav {
     border: 2px solid white;
     transition: 0.5s;
     border-radius: 50%;
-    z-index: 101; /* Pastikan ini lebih tinggi dari chat-container */
+    z-index: 101; 
 }
 
 .close-chat:hover {
@@ -330,7 +506,7 @@ nav {
 
 .clear-chat {
     position: absolute;
-    background-color: #030026;
+    background-color: var(--secondary--);
     border-radius: 50%;
     cursor: pointer;
     right: -60px;
@@ -348,4 +524,286 @@ nav {
     height: 30px;
    padding: 10px;
 }
+
+/* =========================RESPONSIVE======================== */
+
+@media only screen and (max-width: 1200px) {
+    
+  /* Navbar */
+
+  .logo-web img {
+    width: 180px;
+  }
+
+  /* section welcome */
+
+  .welcome h1 {
+    font-size: 2.8rem;
+    line-height: 40px;
+  }
+
+  /*==== Info === */
+
+  .info h1 {
+    font-size: 1.8rem;
+  }
+
+  /* wrapper sambutan */
+
+  .wrapper-sambutan h1 {
+    font-size: 1.5rem;
+  }
+
+  .wrapper-sambutan h2 {
+    font-size: 1.3rem;
+  }
+
+  .sambutan img {
+    width: 380px;
+
+  }
+
+  /* Menu - card */
+
+  .menu-card {
+    cursor: pointer;
+    margin: 20px 15px;
+    padding: 40px 30px;
+    }
+
+  .icon-menu-wrapper img {
+    width: 40px;
+    height: 40px;
+    }
+
+    /* ====Berita==== */
+
+    .berita h1 {
+        font-size: 1.8rem;
+    }
+
+    .wrapper-berita {
+        max-width: 70%;
+    }
+
+    .wrapper-main-berita img {
+        width: 400px;
+        height: 250px;
+    }
+
+}
+
+@media only screen and (max-width: 992px) {
+
+    /* Navbar */
+    nav {
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .logo-web img {
+        width: 160px;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    /* section welcome */
+
+    .welcome {
+        border-bottom: 40px solid var(--primary--);
+    }
+
+    .welcome h1 {
+        font-size: 2.6rem;
+    }
+
+    /* Card */
+
+    .card {
+        margin: auto;
+        width: 60%;
+        flex-wrap: wrap;
+    }
+
+    .menu-card {
+        padding: 30px 20px;
+    }
+
+    .icon-menu-wrapper img {
+        width: 30px;
+        height: 30px;
+    }
+
+
+
+    /* Chat */
+
+    .chat-container {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+}
+
+@media only screen and (max-width: 767.98px) {
+
+    /* Navbar */
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .chat-container {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    /* Chat */
+
+    .chat-container {
+        width: 400px;
+    }
+
+    .chat-box {
+        height: 440px;
+    }
+    
+}
+
+@media only screen and (max-width: 425.98px) {
+
+    /* Navbar */
+
+    .logo-web img {
+        width: 140px;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .hamburger-menu div {
+        width: 26px;
+    }
+    
+    .menu {
+        display: none;
+    }
+
+
+    /* Welcome */
+
+    .welcome {
+        border-radius: 0 0 50px 0;
+        border-bottom: 20px;
+    }
+
+    .welcome h1 {
+        font-size: 1.6rem;
+        line-height: 30px;
+    }
+
+    /* info */
+    
+    .info h1 {
+        font-size: 1.4rem;
+    }
+
+    .info p {
+        font-size: 14px;
+    }
+
+
+    /* Chat */
+    .logo-chatbot img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .logo-chatbot h4 {
+        font-size: 16px;
+    }
+
+    .chat-container {
+        width: 80%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .chat-box{
+        height: 350px;
+    }
+
+    .chat-box .bot-respond img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .chat-box .bot-respond p {
+        padding: 8px;
+        margin-left: 2%;
+        font-size: 14px;
+        border-radius: 0 20px 20px 20px;
+    }
+
+    .chat-box .user-chat img {
+        width: 30px;
+        height: 30px;
+    }
+    .chat-box .user-chat p {
+        padding: 8px;
+        margin-left: 2%;
+        font-size: 14px;
+        border-radius: 20px 0 20px 20px;
+    }
+
+    #kirim {
+        margin-right: 4%;
+    }
+
+    #kirim img {
+        width: 20px;
+        cursor: pointer;
+    }
+
+    .close-chat {
+        background-color: red;
+    }
+
+    .close-chat img {
+        width: 20px;
+    }
+
+    .clear-chat {
+        right: 300px;
+        top: 480px;
+    }
+
+    .clear-chat img {
+        width: 24px;
+        height: 24px;
+        padding: 6px;
+    }
+
+    .chat-pop-up img {
+        width: 60px;
+    }
+    
+}
+
+
+
+
 
