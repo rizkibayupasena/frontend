@@ -7,7 +7,7 @@ function sendMessage() {
     if (userMessage !== '') {
         addMessage(userMessage, 'user-chat', imageUrlGuest);
 
-        fetch('https://741c-103-87-230-38.ngrok-free.app/ask', {
+        fetch('https://4e50-103-87-230-38.ngrok-free.app/ask', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
