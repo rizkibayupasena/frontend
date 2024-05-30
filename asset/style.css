@@ -379,6 +379,7 @@ nav {
 
 .chat-box .bot-respond p {
     padding: 10px;
+    white-space: pre-line;
     margin-left: 3%;
     background-color: var(--background-light--);
     color: var(--secondary--);

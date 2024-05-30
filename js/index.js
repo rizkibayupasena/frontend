@@ -18,7 +18,7 @@ function addMessage(message, className, imageUrl) {
     }
 
     const messageElement = document.createElement('p');
-    messageElement.textContent = message;
+    messageElement.innerHTML = message;
     li.appendChild(messageElement);
 
     

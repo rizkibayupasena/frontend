@@ -1,4 +1,10 @@
-import { addMessage, chatBox, textarea } from './index.js'; 
+import { addMessage, chatBox, textarea } from './index.js';
+
+function replacePlaceholderWithBr(text) {
+    return text.replace(/br/g, '<br/>');
+}
+
+
 function sendMessage() {
     const imageUrlGuest = '../asset/img/guestchat.svg';
     const imageUrlBot = '../asset/img/herochat.svg';
@@ -7,7 +13,7 @@ function sendMessage() {
     if (userMessage !== '') {
         addMessage(userMessage, 'user-chat', imageUrlGuest);
 
-        fetch('https://7e68-103-87-230-38.ngrok-free.app/ask', {
+        fetch(' https://e1f5-103-87-230-38.ngrok-free.app/ask', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -16,8 +22,8 @@ function sendMessage() {
         })
             .then(response => response.json())
             .then( data => {
-                const botMessage = data.response;
-                console.log(botMessage);
+                let botMessage = data.response;
+                botMessage = replacePlaceholderWithBr(botMessage);
                 addMessage(botMessage, 'bot-respond', imageUrlBot);
             })
             .catch(error => console.error('Error:', error));
@@ -27,3 +33,7 @@ function sendMessage() {
 }
 
 export { sendMessage };
+
+
+
+
