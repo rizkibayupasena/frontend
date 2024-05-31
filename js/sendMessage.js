@@ -13,7 +13,7 @@ function sendMessage() {
     if (userMessage !== '') {
         addMessage(userMessage, 'user-chat', imageUrlGuest);
 
-        fetch(' https://e1f5-103-87-230-38.ngrok-free.app/ask', {
+        fetch(' https://6ea4-103-87-230-38.ngrok-free.app/ask', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
