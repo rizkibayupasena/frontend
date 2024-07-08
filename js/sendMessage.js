@@ -13,7 +13,7 @@ function sendMessage() {
     if (userMessage !== '') {
         addMessage(userMessage, 'user-chat', imageUrlGuest);
 
-        fetch(' https://6ea4-103-87-230-38.ngrok-free.app/ask', {
+        fetch('https://95ad-223-255-229-75.ngrok-free.app/ask', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -31,9 +31,4 @@ function sendMessage() {
         textarea.value = '';
     }
 }
-
 export { sendMessage };
-
-
-
-
